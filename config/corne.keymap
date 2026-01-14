@@ -28,10 +28,10 @@
 
         raise_layer {
             bindings = <
-  &none  &none      &none    &kp HOME  &none     &kp C_AC_CUT  &kp C_AC_COPY  &kp C_AC_PASTE  &none  &kp LG(GRAVE)
-  &none  &kp PG_UP  &kp TAB  &none     &none     &none         &none          &none           &none  &kp LG(TAB)
-  &none  &kp PG_DN  &none    &none     &none     &none         &kp LBKT       &kp RBKT        &none  &kp BSLH
-                    &trans   &trans    &trans    &trans        &trans         &trans
+  &none                      &none           &none      &none   &kp HOME         &kp C_AC_CUT           &kp C_AC_COPY  &kp C_AC_PASTE  &none  &kp LG(GRAVE)
+  &none                      &kp UP_ARROW    &none      &none   &kp PAGE_UP      &kp LS(RG(LC(MINUS)))  &none          &none           &none  &kp LG(TAB)
+  &mt LEFT_SHIFT LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none   &kp PAGE_DOWN    &kp ESC                &kp LBKT       &kp RBKT        &none  &kp BSLH
+                                             &trans     &trans  &trans           &trans                 &trans         &trans
             >;
         };
 
