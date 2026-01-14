@@ -2,6 +2,13 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// THIS IS THE FIX: IT TELLS THE BOARD TO BE 5-COLUMN
+/ {
+  chosen {
+    zmk,matrix_transform = &five_column_transform;
+  };
+};
+
 / {
     keymap {
         compatible = "zmk,keymap";
