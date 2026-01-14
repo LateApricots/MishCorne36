@@ -19,10 +19,10 @@
 
         lower_layer {
             bindings = <
-  &kp N1    &kp N2    &kp N3     &kp N4  &kp N5     &kp N6     &kp N7     &kp N8    &kp N9     &kp N0
-  &kp HOME  &kp UP    &none      &none   &kp TAB    &kp MINUS  &kp EQUAL  &none     &kp UP     &kp APOS
-  &kp LEFT  &kp DOWN  &kp RIGHT  &none   &kp ESC    &none      &kp LEFT   &kp DOWN  &kp RIGHT  &none
-                      &trans     &trans  &trans     &trans     &trans     &trans
+  &kp N1                     &kp N2    &kp N3     &kp N4  &kp N5     &kp N6     &kp N7     &kp N8          &kp N9          &kp N0
+  &kp HOME                   &kp UP    &none      &none   &kp TAB    &kp MINUS  &kp EQUAL  &none           &kp UP          &kp APOS
+  &mt LEFT_SHIFT LEFT_ARROW  &kp DOWN  &kp RIGHT  &none   &kp ESC    &none      &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &mt RIGHT_SHIFT RIGHT_ARROW
+                                       &trans     &trans  &trans     &trans     &trans     &trans
             >;
         };
 
