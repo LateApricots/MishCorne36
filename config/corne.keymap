@@ -17,38 +17,42 @@
         };
 
         /* LAYER 1: NAV / NUM */
+
         lower_layer {
             bindings = <
-  &kp N1     &kp N2     &kp N3     &kp N4     &kp N5          &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
-  &kp HOME   &kp UP     &none      &none      &kp TAB         &kp MINUS  &kp EQUAL  &none      &kp UP     &kp APOS
-  &kp LEFT   &kp DOWN   &kp RIGHT  &none      &kp ESC         &none      &none      &kp LEFT   &kp DOWN   &kp RIGHT
-                      &trans      &trans     &trans          &trans     &trans     &trans
+  &kp N1                &kp N2    &kp N3     &kp N4  &kp N5     &kp N6             &kp N7     &kp N8          &kp N9          &kp N0
+  &kp LG(TAB)           &kp UP    &none      &none   &kp TAB    &kp LS(RA(MINUS))  &kp EQUAL  &none           &kp UP          &kp APOS
+  &mt LSHFT LEFT_ARROW  &kp DOWN  &kp RIGHT  &none   &kp ESC    &none              &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &mt RSHFT RIGHT_ARROW
+                                  &trans     &trans  &trans     &trans             &trans     &trans
             >;
         };
 
         /* LAYER 2: EDIT / SHORTCUTS */
+
         raise_layer {
             bindings = <
-  &none      &none      &none      &none      &kp HOME        &kp C_AC_CUT    &kp C_AC_COPY   &kp C_AC_PASTE  &none  &kp LG(GRAVE)
-  &none      &kp UP     &none      &none      &kp PG_UP       &kp LS(RG(LC(MINUS)))  &none      &none         &none  &kp LG(TAB)
-  &kp LEFT   &kp DOWN   &kp RIGHT  &none      &kp PG_DN       &kp ESC        &kp LBKT        &kp RBKT        &none  &kp BSLH
-                      &trans      &trans     &trans          &trans         &trans          &trans
+  &none                 &none           &none      &none   &none     &kp C_AC_CUT   &kp C_AC_COPY  &kp C_AC_PASTE  &none  &kp LG(GRAVE)
+  &none                 &kp UP_ARROW    &none      &none   &none     &kp RG(MINUS)  &none          &none           &none  &kp LG(TAB)
+  &mt LSHFT LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none   &none     &kp ESC        &kp LBKT       &kp RBKT        &none  &mt RSHFT BSLH
+                                        &trans     &trans  &trans    &trans         &trans         &trans
             >;
         };
 
         /* LAYER 3: ADJUST / BT / MEDIA */
+
         adjust_layer {
             bindings = <
-  &kp HOME   &none      &none      &kp F1     &kp F2          &kp C_VOL_DN    &kp C_VOL_UP    &none  &none  &kp HOME
-  &kp PG_UP  &none      &none      &none      &none           &none           &none           &none  &none  &kp PG_UP
-  &kp PG_DN  &none      &none      &none      &none           &none           &none           &none  &none  &kp PG_DN
-                      &trans      &trans     &trans          &trans          &trans          &trans
+  &kp HOME   &none  &none   &kp F1  &kp F2    &kp C_VOL_DN  &kp C_VOL_UP  &none   &none  &kp HOME
+  &kp PG_UP  &none  &none   &none   &none     &none         &none         &none   &none  &kp PG_UP
+  &kp PG_DN  &none  &none   &none   &none     &none         &none         &none   &none  &kp PG_DN
+                    &trans  &trans  &trans    &trans        &trans        &trans
             >;
         };
     };
 };
 
 /* Global mod-tap tuning */
+
 &mt {
     flavor = "hold-preferred";
     tapping-term-ms = <200>;
