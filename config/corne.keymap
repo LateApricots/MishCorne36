@@ -18,19 +18,19 @@
 
         lower_layer {
             bindings = <
-  &kp N1                     &kp N2    &kp N3     &kp N4  &kp N5     &kp N6     &kp N7     &kp N8          &kp N9          &kp N0
-  &kp HOME                   &kp UP    &none      &none   &kp TAB    &kp MINUS  &kp EQUAL  &none           &kp UP          &kp APOS
-  &mt LEFT_SHIFT LEFT_ARROW  &kp DOWN  &kp RIGHT  &none   &kp ESC    &none      &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &mt RIGHT_SHIFT RIGHT_ARROW
-                                       &trans     &trans  &trans     &trans     &trans     &trans
+  &kp N1                   &kp N2    &kp N3     &kp N4    &kp N5     &kp N6     &kp N7     &kp N8          &kp N9          &kp N0
+  &kp HOME                 &kp UP    &none      &none     &kp TAB    &kp MINUS  &kp EQUAL  &none           &kp UP          &kp APOS
+  &mt LSHFT LEFT_ARROW     &kp DOWN  &kp RIGHT  &none     &kp ESC    &none      &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &mt RSHFT RIGHT_ARROW
+                                     &trans     &trans    &trans     &trans     &trans     &trans
             >;
         };
 
         raise_layer {
             bindings = <
-  &none                      &none           &none      &none   &kp HOME         &kp C_AC_CUT           &kp C_AC_COPY  &kp C_AC_PASTE  &none  &kp LG(GRAVE)
-  &none                      &kp UP_ARROW    &none      &none   &kp PAGE_UP      &kp LS(RG(LC(MINUS)))  &none          &none           &none  &kp LG(TAB)
-  &mt LEFT_SHIFT LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none   &kp PAGE_DOWN    &kp ESC                &kp LBKT       &kp RBKT        &none  &mt RIGHT_SHIFT BSLH
-                                             &trans     &trans  &trans           &trans                 &trans         &trans
+  &none                    &none           &none      &none     &kp HOME         &kp C_AC_CUT           &kp C_AC_COPY  &kp C_AC_PASTE  &none  &kp LG(GRAVE)
+  &none                    &kp UP_ARROW    &none      &none     &kp PG_UP        &kp LS(RG(LC(MINUS)))  &none          &none           &none  &kp LG(TAB)
+  &mt LSHFT LEFT_ARROW     &kp DOWN_ARROW  &kp RIGHT  &none     &kp PG_DN        &kp ESC                &kp LBKT       &kp RBKT        &none  &mt RSHFT BSLH
+                                           &trans     &trans    &trans           &trans                 &trans         &trans
             >;
         };
 
@@ -45,9 +45,10 @@
     };
 };
 
+/* Global mod-tap tuning */
 &mt {
-    flavor = "balanced";
+    flavor = "hold-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <150>;
-    hold-trigger-on-release;
+    /* removed: hold-trigger-on-release; */
 };
