@@ -11,24 +11,27 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            // Right Thumb Enter is the trigger for Layer 2 (App Switcher)
             bindings = <
     &kp Q        &kp W       &kp E        &kp R       &kp T          &kp Y        &kp U       &kp I       &kp O       &kp P
     &kp A        &kp S       &kp D        &kp F       &kp G          &kp H        &kp J       &kp K       &kp L       &kp SEMI
-    &mt LSHFT Z  &kp X       &mt LCTRL C  &kp V       &lt 3 B        &lt 3 N      &kp M       &kp COMMA   &kp DOT     &mt RSHFT FSLH
+    &mt LSHIFT Z &kp X       &mt LCTRL C  &kp V       &lt 3 B        &lt 3 N      &kp M       &kp COMMA   &kp DOT     &mt RSHIFT FSLH
                              &kp LALT     &kp LGUI    &lt 1 SPACE    &lt 2 RET    &kp BSPC    &kp RALT
             >;
         };
 
         lower_layer {
+            // Layer 1: Linear Arrows on Right Hand (Right, Down, Left) to match Iris JSON
             bindings = <
-    &kp N1       &kp N2      &kp N3       &kp N4      &kp N5         &kp N6       &kp N7      &kp N8      &kp N9      &kp N0
-    &kp HOME     &kp UP      &none        &none       &kp TAB        &kp MINUS    &kp EQUAL   &none       &kp UP      &kp APOS
-    &kp LEFT     &kp DOWN    &kp RIGHT    &none       &kp ESC        &none        &kp LEFT    &kp DOWN    &kp RIGHT   &none
+    &kp N1       &kp N2      &kp N3       &kp N4      &kp N5         &kp N0       &kp N9      &kp N8      &kp N7      &kp N6
+    &kp HOME     &kp UP      &none        &none       &kp TAB        &kp APOS     &kp UP      &none       &kp EQUAL   &kp MINUS
+    &kp LEFT     &kp DOWN    &kp RIGHT    &none       &kp ESC        &kp RIGHT    &kp DOWN    &kp LEFT    &none       &none
                              &trans       &trans      &trans         &trans       &trans      &trans
             >;
         };
 
         raise_layer {
+            // Layer 2: Hold Enter + Tap ; (Top Right of Bottom Row) for App Switcher
             bindings = <
     &none        &none       &none        &kp HOME    &none          &kp C_AC_CUT &kp C_AC_COPY &kp C_AC_PASTE &none      &kp LG(GRAVE)
     &none        &kp PG_UP   &kp TAB      &none       &none          &none        &none         &none          &none      &kp LG(TAB)
@@ -38,11 +41,12 @@
         };
 
         adjust_layer {
+            // Layer 3: Bluetooth and Volume
             bindings = <
-    &kp F1       &kp F2      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &kp HOME     &kp C_VOL_UP &kp C_VOL_DN  &none       &none
-    &kp PG_UP    &none       &none        &none        &none         &none        &none        &none         &none       &kp PG_UP
-    &kp PG_DN    &none       &none        &bt BT_CLR   &none         &none        &none        &none         &none       &kp PG_DN
-                             &trans       &trans       &trans        &trans       &trans       &trans
+    &kp F1       &kp F2      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &kp HOME     &kp C_VOL_UP  &kp C_VOL_DN   &none      &none
+    &kp PG_UP    &none       &none        &none        &none         &none        &none         &none          &none      &kp PG_UP
+    &kp PG_DN    &none       &none        &bt BT_CLR   &none         &none        &none         &none          &none      &kp PG_DN
+                             &trans       &trans       &trans        &trans       &trans        &trans
             >;
         };
     };
