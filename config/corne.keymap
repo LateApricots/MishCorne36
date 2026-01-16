@@ -29,7 +29,7 @@
 
         /* LAYER 2: EDIT / SHORTCUTS */
 
-        raise_layer {
+        Layer2 {
             bindings = <
   &none                 &none           &none      &none   &none      &kp C_AC_CUT   &kp C_AC_COPY  &kp C_AC_PASTE  &none  &kp LG(GRAVE)
   &none                 &kp UP_ARROW    &none      &none   &kp TAB    &kp RA(MINUS)  &none          &none           &none  &kp LG(TAB)
@@ -40,7 +40,7 @@
 
         /* LAYER 3: ADJUST / BT / MEDIA */
 
-        adjust_layer {
+        Layer3 {
             bindings = <
   &kp HOME   &none  &none   &kp F1  &kp F2    &kp C_VOL_DN       &kp C_VOL_UP  &none   &none  &kp HOME
   &kp PG_UP  &none  &none   &none   &none     &kp LS(RA(MINUS))  &none         &none   &none  &kp PG_UP
